@@ -19,6 +19,9 @@ properties:
     default:
       lucid64: linux-circus/linux-circus.tgz
 
+  app_manager.num_executor_azs:
+    description: 'Number of Availability Zones or Clusters the Executors are distributed across'
+
   network_name:
     description: "Name of the network that the job lives in; used to figure out our IP."
 

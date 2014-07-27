@@ -24,6 +24,9 @@ properties:
     description: "the stack for which to handle requests"
     default: "lucid64"
 
+  rep.az_number:
+    description: "The number of the Availability Zone or Cluster that this Rep is on. E.g. if the Reps/Executors are distributed across 3 AZs, this should be a number 0-2.  If you follow the convention of naming the executor job executor_z<n>, it's conventional to set rep.az_number to <n-1>"
+
   rep.executor.url:
     description: "URL of the executor to represent."
     default: "http://127.0.0.1:1700"

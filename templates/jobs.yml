@@ -29,6 +29,8 @@ jobs:
     properties:
       network_name: diego1
       loggregator_endpoint: (( external_services.loggregator_endpoint.z1 ))
+      rep:
+        az_number: 0
 
   - name: executor_z2
     release: diego
@@ -50,6 +52,8 @@ jobs:
     properties:
       network_name: diego2
       loggregator_endpoint: (( external_services.loggregator_endpoint.z2 ))
+      rep:
+        az_number: 1
 
   - name: file_server_z1
     release: diego
@@ -235,6 +239,7 @@ properties:
 
   app_manager:
     lifecycle_bundles: ~
+    num_executor_azs: 2
 
   stager:
     lifecycle_bundles: ~
